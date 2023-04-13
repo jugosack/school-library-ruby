@@ -8,6 +8,11 @@ class Student < Person
     @classroom = classroom
   end
 
+  def add_classroom(classroom)
+    @classroom = classroom
+    classroom.students << self
+  end
+
   def play_hooky
     '¯(ツ)/¯'
   end
