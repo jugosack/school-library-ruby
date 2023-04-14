@@ -63,6 +63,9 @@ To get a local copy up and running, follow these steps.
 In order to run this project you need:
 
 - To install [Ruby](https://www.ruby-lang.org/en/documentation/installation/)
+```
+ruby main.rb
+```
 
 ### Setup
 
