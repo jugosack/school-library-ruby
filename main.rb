@@ -1,5 +1,20 @@
 require './app'
 
+def main
+  app = App.new
+
+  puts '___________________________________________________________'
+  puts 'WELCOME TO THE SCHOOL LIBRARY APP!'
+  puts '___________________________________________________________'
+
+  while true
+    puts list_options
+    option = gets.chomp.to_i
+    option(option, app)
+    puts '___________________________________________________________'
+  end
+end
+
 def list_options
   'Please choose an option by entering a number:
     1 - List of all books
@@ -32,16 +47,6 @@ def option(option, app) # rubocop:disable Metrics/CyclomaticComplexity
   end
 end
 
-def main
-  app = App.new
 
-  puts "Welcome to School Library App!\n\n"
-
-  loop do
-    puts list_options
-    option = gets.chomp.to_i
-    option(option, app)
-  end
-end
 
 main
