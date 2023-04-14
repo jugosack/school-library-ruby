@@ -7,7 +7,7 @@ def main
   puts 'WELCOME TO THE SCHOOL LIBRARY APP!'
   puts '___________________________________________________________'
 
-  while true
+  loop do
     puts list_options
     option = gets.chomp.to_i
     option(option, app)
@@ -46,7 +46,5 @@ def option(option, app) # rubocop:disable Metrics/CyclomaticComplexity
     puts 'Invalid option, please type correct number!'
   end
 end
-
-
 
 main

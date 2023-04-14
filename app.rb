@@ -5,7 +5,6 @@ require_relative './teacher'
 require_relative './book'
 require_relative './classroom'
 
-
 class App
   attr_accessor :people, :books, :rentals
 
@@ -33,11 +32,7 @@ class App
     if select_person == 1
       print 'Has parent permission? [Y/N]: '
       permission_input = gets.chomp.downcase
-      if permission_input == 'y'
-        permission = true
-      else
-        permission = false
-      end
+      permission = permission_input == 'y'
       @people << Student.new(nil, age, name, permission)
     elsif select_person == 2
       print 'Specialization: '
@@ -61,8 +56,9 @@ class App
     @books.each_with_index { |book, index| puts "#{index}) Title: \"#{book.title}\", Author: #{book.author}" }
     book_number = gets.chomp.to_i
     puts 'Select a person from the following list by number (not id)'
-    @people.each_with_index {|person, index|
-      puts "#{index}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
+    @people.each_with_index do |person, index|
+      puts "#{index}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+    end
     person_number = gets.chomp.to_i
     print 'Date: '
     date = gets.chomp
@@ -74,7 +70,8 @@ class App
     print 'ID of person: '
     id = gets.chomp.to_i
     puts 'Rentals: '
-    @rentals.each { |rental|
-      puts "Date: #{rental.date}, Book: \"#{rental.book.title} by #{rental.book.author}" if rental.person.id == id }
+    @rentals.each do |rental|
+      puts "Date: #{rental.date}, Book: \"#{rental.book.title} by #{rental.book.author}" if rental.person.id == id
+    end
   end
 end
