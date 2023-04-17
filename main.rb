@@ -49,7 +49,6 @@ class Library
       list_rentals
     elsif option == 7
       puts 'Goodbye!'
-      break
     else
       puts 'Invalid option, please type correct number!'
     end
