@@ -2,7 +2,6 @@ require './app'
 require './library'
 
 class Library
-
   def initialize(input)
     @app = input
   end
@@ -35,7 +34,6 @@ class Library
     puts '6 - List of all rental for given id'
     puts '7 - Exit'
   end
-
 end
 
 lib = Library.new(App.new)
