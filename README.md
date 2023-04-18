@@ -99,6 +99,12 @@ Clone this repository to your desired folder:
 - Twitter: [@markfen4](https://twitter.com/markfen4)
 - LinkedIn: [Mark Fenekayas](https://www.linkedin.com/in/mark-fenekayas-67378220b/)
 
+👤 **Innocent Chase**
+
+- GitHub: [@chaseknis](https://github.com/Chaseknis)
+- Twitter: [@ChaseToTheWorld](https://twitter.com/chasetotheworld)
+- LinkedIn: [Innocent N.](https://www.linkedin.com/in/innocent-n-200826252/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
