@@ -1,3 +1,4 @@
+require 'json'
 require_relative './person'
 require_relative './rental'
 require_relative './student'
@@ -74,4 +75,7 @@ class App
       puts "Date: #{rental.date}, Book: \"#{rental.book.title} by #{rental.book.author}" if rental.person.id == id
     end
   end
+############################################
+  
+  #################################################################################
 end

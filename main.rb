@@ -5,17 +5,9 @@ class Library
   def initialize(input)
     @app = input
   end
-
-  def display
-    welcom_mesg
-    loop do
-      list_options
-      option = gets.chomp.to_i
-      LibraryMenager.new(@app).process_option(option)
-      puts '___________________________________________________________'
-    end
-  end
-
+################################################
+  
+################################################
   private
 
   def welcom_mesg
