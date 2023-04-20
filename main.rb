@@ -5,25 +5,26 @@ class Library
   def initialize(input)
     @app = input
   end
-################################################
-def display
-  welcom_mesg
-  loop do
-    list_options
-    option = gets.chomp.to_i
-    if option == '7'
-      LibraryMenager.new(@app).save_data
-      break
+
+  ################################################
+  def display
+    welcom_mesg
+    loop do
+      list_options
+      option = gets.chomp.to_i
+      if option == '7'
+        LibraryMenager.new(@app).save_data
+        break
+      end
+      LibraryMenager.new(@app).process_option(option)
+      puts '___________________________________________________________'
     end
-    LibraryMenager.new(@app).process_option(option)
-    puts '___________________________________________________________'
+    LibraryMenager.new(@app).parse_books
+    LibraryMenager.new(@app).parse_people
+    LibraryMenager.new(@app).parse_rentals
   end
-  LibraryMenager.new(@app).parse_books
-  LibraryMenager.new(@app).parse_people
-  LibraryMenager.new(@app).parse_rentals
-end
-  
-################################################
+
+  ################################################
   private
 
   def welcom_mesg
