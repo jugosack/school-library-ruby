@@ -22,7 +22,8 @@ class LibraryMenager
     when 6
       list_rentals
     when 7
-      exit
+      # exit
+      save_data
     else
       puts 'Invalid option, please type correct number!'
     end
@@ -50,5 +51,21 @@ class LibraryMenager
 
   def list_rentals
     @app.list_rentals
+  end
+
+  def save_data
+    @app.save_data
+  end
+
+  def parse_books
+    @app.parse_books
+  end
+
+  def parse_people
+    @app.parse_people
+  end
+
+  def parse_rentals
+    @app.parse_rentals
   end
 end
