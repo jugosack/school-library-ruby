@@ -38,6 +38,7 @@ This is a user-friendly tool that efficiently manages book inventory, borrowers,
 - **Student and Teacher Management**
 - **Add basic UI.**
 - **Refactor code.**
+- **Preserve data.**
 
   > Allows users to add new students or teachers to the library. Users will be able to input relevant information such as names, contact details, and identification numbers for easy identification and communication.
 
@@ -109,7 +110,6 @@ Clone this repository to your desired folder:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Preserve data.**
 - [ ] **Add unit tests.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
