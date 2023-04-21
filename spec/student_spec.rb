@@ -2,7 +2,6 @@ require 'rspec'
 require_relative '../student'
 require_relative '../classroom'
 
-
 describe Student do
   describe 'initialize class' do
     it 'creating new students' do
