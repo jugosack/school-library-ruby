@@ -25,4 +25,3 @@ describe 'Classroom' do
     expect(@student2.classroom).to eq @classroom
   end
 end
-
