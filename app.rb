@@ -34,7 +34,7 @@ class App
       print 'Has parent permission? [Y/N]: '
       permission_input = gets.chomp.downcase
       permission = permission_input == 'y'
-      @people << Student.new(nil, age, name, permission)
+      @people << Student.new(age, name, permission)
     elsif select_person == 2
       print 'Specialization: '
       specialization = gets.chomp
