@@ -5,7 +5,7 @@ require_relative '../capitalizedecorator'
 class CapitalizeDecoratorTest < Minitest::Test
   class FakeNameable
     def correct_name
-      "jane doe"
+      'jane doe'
     end
   end
 
@@ -13,6 +13,6 @@ class CapitalizeDecoratorTest < Minitest::Test
     fake_nameable = FakeNameable.new
     capitalize_decorator = CapitalizeDecorator.new(fake_nameable)
 
-    assert_equal "Jane doe", capitalize_decorator.correct_name
+    assert_equal 'Jane doe', capitalize_decorator.correct_name
   end
 end

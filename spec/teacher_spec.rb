@@ -7,7 +7,7 @@ describe 'Teacher class test' do
     it 'Should create teachers with no problems' do
       teacher1 = Teacher.new(46, 'Jugoslav', 'Computer Science')
       expect(teacher1.age).to eq(46)
-    expect(teacher1.name).to eq('Jugoslav')
+      expect(teacher1.name).to eq('Jugoslav')
 
       expect(teacher1.instance_variable_get(:@parent_permission)).to be true
       expect(teacher1.instance_variable_get(:@specialization)).to eq('Computer Science')

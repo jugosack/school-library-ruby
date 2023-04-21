@@ -14,7 +14,7 @@ describe Student do
     end
   end
 
-describe '#add_classroom' do
+  describe '#add_classroom' do
     let(:classroom) { Classroom.new('Math') }
     let(:student) { Student.new(nil, 15, 'Alice', true) }
 
@@ -32,7 +32,7 @@ describe '#add_classroom' do
   describe 'testing play hooky method' do
     it 'should return  "¯(ツ)/¯" ' do
       student3 = Student.new('Math', 15, 'Unknown', true)
-      expect(student3.play_hooky).to eq( '¯(ツ)/¯')
+      expect(student3.play_hooky).to eq('¯(ツ)/¯')
     end
   end
 end
