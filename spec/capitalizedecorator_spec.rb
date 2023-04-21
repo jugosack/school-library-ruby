@@ -1,7 +1,6 @@
 require 'minitest/autorun'
 require_relative '../decorator'
 require_relative '../capitalizedecorator'
-
 class CapitalizeDecoratorTest < Minitest::Test
   class FakeNameable
     def correct_name

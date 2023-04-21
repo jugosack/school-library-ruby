@@ -1,7 +1,6 @@
 require 'rspec'
 require_relative '../teacher'
 
-
 describe 'Teacher class test' do
   describe 'Initializing teacher' do
     it 'Should create teachers with no problems' do
