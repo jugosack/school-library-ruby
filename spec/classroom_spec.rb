@@ -5,8 +5,8 @@ require_relative '../student'
 describe 'Classroom' do
   before :all do
     @classroom = Classroom.new('Ruby')
-    @student1 = Student.new(@classroom, 18, 'Alice', true)
-    @student2 = Student.new(@classroom, 19, 'Bob', true)
+    @student1 = Student.new(18, 'Alice', true)
+    @student2 = Student.new(19, 'Bob', true)
   end
 
   it 'has a label' do
@@ -25,3 +25,4 @@ describe 'Classroom' do
     expect(@student2.classroom).to eq @classroom
   end
 end
+

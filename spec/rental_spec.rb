@@ -5,7 +5,7 @@ require_relative '../book'
 
 describe Rental do
   before do
-    @person = Person.new(27, 'John Doe', 1)
+    @person = Person.new(27, 'John Doe')
     @book = Book.new('The Great Gatsby', 'F. Scott Fitzgerald')
     @rental = Rental.new('2023-04-21', @person, @book)
   end
