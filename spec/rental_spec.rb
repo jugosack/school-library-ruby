@@ -5,13 +5,13 @@ require_relative '../book'
 
 describe Rental do
   before do
-    @person = Person.new(27, 'John Doe')
+    @person = Person.new(27, 'John Doe', 1)
     @book = Book.new('The Great Gatsby', 'F. Scott Fitzgerald')
-    @rental = Rental.new('2023-04-21', @person, @book)
+    @rental = Rental.new('13.04.2023', @person, @book)
   end
 
   it 'has a date' do
-    expect(@rental.date).to eq('2023-04-21')
+    expect(@rental.date).to eq('13.04.2023')
   end
 
   it 'belongs to a person' do

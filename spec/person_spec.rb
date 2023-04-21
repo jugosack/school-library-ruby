@@ -3,7 +3,7 @@ require_relative '../person'
 
 describe Person do
   before do
-    @person = Person.new(27, 'John Doe')
+    @person = Person.new(27, 'John Doe', true)
   end
 
   it 'can have a name' do

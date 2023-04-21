@@ -2,26 +2,42 @@ require 'rspec'
 require_relative '../classroom'
 require_relative '../student'
 
-describe 'Classroom' do
-  before :all do
-    @classroom = Classroom.new('Ruby')
-    @student1 = Student.new(18, 'Alice', true)
-    @student2 = Student.new(19, 'Bob', true)
+describe Classroom do
+  let(:student) { double('Student', classroom: nil) }
+
+  before do
+    allow(student).to receive(:classroom=)
   end
 
-  it 'has a label' do
-    expect(@classroom.label).to eq 'Ruby'
+  describe '#initialize' do
+    it 'creates a new classroom with the given label' do
+      classroom = described_class.new('A label')
+
+      expect(classroom.label).to eq('A label')
+    end
+
+    it 'initializes the students array as empty' do
+      classroom = described_class.new('A label')
+
+      expect(classroom.students).to be_empty
+    end
   end
 
-  it 'starts with no students' do
-    expect(@classroom.students).to be_empty
-  end
+  describe '#add_student' do
+    it 'adds the student to the students array' do
+      classroom = described_class.new('A label')
 
-  it 'can add students' do
-    @classroom.add_student(@student1)
-    @classroom.add_student(@student2)
-    expect(@classroom.students.length).to eq 2
-    expect(@student1.classroom).to eq @classroom
-    expect(@student2.classroom).to eq @classroom
+      classroom.add_student(student)
+
+      expect(classroom.students).to include(student)
+    end
+
+    it 'sets the student classroom to self' do
+      classroom = described_class.new('A label')
+
+      expect(student).to receive(:classroom=).with(classroom)
+
+      classroom.add_student(student)
+    end
   end
 end

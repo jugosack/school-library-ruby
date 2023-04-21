@@ -1,5 +1,6 @@
 require 'minitest/autorun'
 require_relative '../decorator'
+
 class DecoratorTest < Minitest::Test
   class FakeNameable
     def correct_name
